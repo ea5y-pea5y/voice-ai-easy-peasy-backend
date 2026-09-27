@@ -1,1 +1,13 @@
-
+{
+  "name": "voice-ai-easy-peasy-backend",
+  "version": "1.0.0",
+  "description": "Backend for Voice AI Easy Peasy",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "openai": "^5.22.0"
+  }
+}
