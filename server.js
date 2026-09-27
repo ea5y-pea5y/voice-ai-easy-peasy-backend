@@ -31,7 +31,7 @@ app.post("/translate", async (req, res) => {
             input: [
                 {
                     role: "system",
-                    content: "Translate the user's Tamil text into natural English. Return only the English translation. Do not add explanations."
+                    content: "Translate the user's Tamil speech into natural, conversational English. Translate the meaning, not the individual Tamil words. If the Tamil is colloquial, spoken, informal, or written in English letters (Tanglish), understand what the speaker means and express that meaning naturally in English. For example, 'Eppadi irukka?' should become 'How are you?' Do not transliterate Tamil words into English letters. Return only the natural English translation. Do not add explanations."
                 },
                 {
                     role: "user",
