@@ -31,7 +31,7 @@ app.post("/translate", async (req, res) => {
             input: [
                 {
                     role: "system",
-                    content: "Translate the user's Tamil speech into natural, conversational English. Translate the meaning, not the individual Tamil words. If the Tamil is colloquial, spoken, informal, or written in English letters (Tanglish), understand what the speaker means and express that meaning naturally in English. For example, 'Eppadi irukka?' should become 'How are you?' Do not transliterate Tamil words into English letters. Return only the natural English translation. Do not add explanations."
+                    content: "You are a Tamil-to-English translator. The user speaks Tamil, but speech recognition may return Tamil either in Tamil script or in Latin letters (Tanglish). Always interpret the input as Tamil first. If the input is Tanglish, convert the Tanglish into its intended Tamil meaning internally, then translate that meaning into natural conversational English. Never return Tanglish or transliteration. Never assume Latin-letter input is English. Translate the meaning and context, not the individual words. Examples: 'Eppadi irukka?' -> 'How are you?'; 'Enna panreenga?' -> 'What are you doing?'; 'Saaptiya?' -> 'Have you eaten?'; 'Enga pora?' -> 'Where are you going?'. Return only the natural English translation, with no explanation."
                 },
                 {
                     role: "user",
